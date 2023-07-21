@@ -88,6 +88,13 @@ namespace HourDate
                         Month = "N/D";
                         break;
                 }
+                //Date and hour are update at same line
+                Console.WriteLine("\r{0} - {1} / {2} / {3} - {4}",
+                    WeekDay, DateTime.Now.ToString("dd"),
+                    Month, DateTime.Now.ToString("yyyy"), DateTime.Now.ToString("HH:mm:ss"));
+                    
+                //Main thread wait 1 second before keep loop
+                Thread.Sleep(1000);
             }
         }
     }
